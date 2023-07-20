@@ -66,7 +66,7 @@ function! s:skeletons.registerSkeletons()
     " iterate every skeletons dir
     for skelDir in self.skeletonsDir
         " get all files in skeleton dir
-        let l:files = split(glob(skelDir . self.skeletonGlob, "\n"))
+        let l:files = split(glob(skelDir . self.skeletonGlob), "\n")
         for l:file in l:files
             call self.registerSkeleton(l:file)
         endfor
